@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <title>Web Refresh Display</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="stage">
+    <iframe id="frame" src="about:blank" allowfullscreen="allowfullscreen"></iframe>
+  </div>
+
+  <div id="setup" class="overlay">
+    <div class="card">
+      <h1>إعداد الشاشة</h1>
+      <label>رابط الصفحة</label>
+      <input id="urlInput" type="url" placeholder="https://example.com/dashboard" />
+      <label>فاصل التحديث (ثوانٍ)</label>
+      <input id="intervalInput" type="number" min="3" value="60" />
+      <button id="saveBtn">حفظ وفتح</button>
+      <p id="setupError" class="err"></p>
+      <p class="hint">أو مرّر المعاملات في الرابط: <code>?url=...&amp;interval=60</code></p>
+    </div>
+  </div>
+
+  <div id="toolbar" class="toolbar">
+    <span id="status"></span>
+    <button id="refreshBtn">تحديث</button>
+    <button id="openBtn">فتح خارجياً</button>
+    <button id="exitBtn">خروج</button>
+    <button id="settingsBtn">إعدادات</button>
+    <button id="fullscreenBtn">ملء الشاشة</button>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
